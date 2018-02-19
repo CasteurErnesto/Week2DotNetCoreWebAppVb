@@ -18,7 +18,7 @@ namespace DotNetCoreWebAppVb
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtimex. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
@@ -38,13 +38,13 @@ namespace DotNetCoreWebAppVb
             }
 
             app.UseStaticFiles();
-
-            app.UseMvc(routes =>
+            app.UseMvcWithDefaultRoute();
+           /* app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            });*/
         }
     }
 }
